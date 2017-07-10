@@ -1,0 +1,9 @@
+
+*.pyc
+__pycache__
+bk_venv
+db.sqlite3
+/templates/app
+.idea/
+App/static/assets/
+Docs/~$dkings Online Auction.docx
