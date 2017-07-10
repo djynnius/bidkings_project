@@ -1,39 +1,15 @@
-iLoveyou = True
-yourOwn = ''
-myMoney = ''
-myBody = 'Davido'
-yourBody = input('insert female name\n')
+#writing an mvc wraper for mod python! :-)
+from mod_python import apache
 
-def wear(designerName1,designername2):
-    return '{} {}'.format(designername2,designerName1)
+class Elipsis():
+    def __init__(self, req, apache):
+        self.req = req
+        self.apache = apache
+    
+    def render(self, html):
+        self.req.content_type = 'text/html'
+        return html
 
-def davido():
-    if iLoveyou == True:
-        yourOwn = myMoney + myBody
-        theAccount = 30,000,000,000
-        if len(yourBody) != 0:
-            action = ['gragra','senrere','shakara','gragra']
-            return yourOwn.join(action[0:])
-
-
-    return yourBody + wear('versace','gucci')
-
-def girl(action):
-    stature = 'beautiful'
-    sip = 'burukutu'
-    i = davido()
-    tutu = []
-    for yourlove in tutu:
-        print( "I chook {} chuku chuku".format(yourBody))
-        return i(chook())
-
-def chook(girlName):
-    return girlName
-
-
-
-
-
-
-
-print(wear('gucci','vercace'))
+if __name__ == "__main__":
+    elipsis = Elipsis(req)
+    elipsis.render('<h1>Hello world!</h1>')
